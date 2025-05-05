@@ -1,2 +1,2 @@
 # Monai
-(monai_toolkit_logo.webp)
+![](monai_toolkit_logo.webp)
