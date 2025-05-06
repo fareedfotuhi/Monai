@@ -20,8 +20,9 @@
 
 🖼️ نمونه سگمنتیشن:
 <p align="center">
-  <img src="https://docs.wandb.ai/images/tutorials/monai/viz-1.gif" alt="Brain Tumor Segmentation" width="600"/>
+  <img src="https://docs.wandb.ai/images/tutorials/monai/viz-2.gif" alt="Brain Tumor Segmentation" width="600"/>
 </p>
+
 
 ---
 
@@ -33,7 +34,7 @@
 
 🖼️ نمونه طبقه‌بندی:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Project-MONAI/MONAI/dev/docs/images/classification_example.png" alt="COVID CT Classification" width="600"/>
+  <img src="https://public.grand-challenge-user-content.org/i/2020/10/28/image_101.png" alt="COVID CT Classification" width="600"/>
 </p>
 
 ---
@@ -46,7 +47,7 @@
 
 🖼️ نمونه ثبت تصویر:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Project-MONAI/MONAI/dev/docs/images/registration_example.gif" alt="Image Registration" width="500"/>
+  <img src="https://docs.monai.io/en/0.5.3/_images/3d_paired.png" alt="Image Registration" width="500"/>
 </p>
 
 ---
@@ -59,7 +60,7 @@
 
 🖼️ بازسازی 3D:
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Lung_CT_Scan_3D_Reconstruction.gif" alt="3D CT Reconstruction" width="500"/>
+  <img src="1-s2.0-S2352711023001280-gr4_lrg.jpg" alt="3D CT Reconstruction" width="500"/>
 </p>
 
 ---
@@ -73,5 +74,5 @@
 
 🖼️ ساختار pipeline:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Project-MONAI/MONAI/dev/docs/images/pipeline_example.png" alt="Pipeline Structure" width="600"/>
+  <img src="https://docs.monai.io/en/0.9.1/_images/end_to_end.png" alt="Pipeline Structure" width="600"/>
 </p>
