@@ -1,9 +1,9 @@
 # Monai
-![](monai_toolkit_logo.webp)
-
+<p align="center">
+  <img src="monai_toolkit_logo.webp" width="600"/>
+</p>
 ## مقدمه 
 پیشرفت‌های اخیر در یادگیری عمیق، تحول بزرگی در حوزه تصویربرداری پزشکی ایجاد کرده‌اند؛ از تشخیص خودکار بیماری‌ها تا تحلیل پیچیده داده‌های MRI و CT. با این حال، کار با داده‌های پزشکی به دلیل فرمت‌های خاص، نیازمندی‌های پردازشی بالا، و پیچیدگی مدل‌های مورد نیاز، چالش‌برانگیز است. فریم‌ورک MONAI، که بر پایه PyTorch ساخته شده، با هدف ساده‌سازی توسعه مدل‌های هوش مصنوعی در حوزه پزشکی طراحی شده است. این کتابخانه امکانات پیشرفته‌ای برای پردازش داده‌های تصویربرداری پزشکی، ساخت مدل‌های پیچیده (مانند UNet، DynUNet و SegResNet)، و آموزش در سطح صنعتی فراهم می‌کند.
-
 
 ## 📌 کاربردهای MONAI
 
@@ -11,7 +11,7 @@
 
 ---
 
-### 🧠 1. **سگمنتیشن تصاویر پزشکی (Medical Image Segmentation)**
+### 🧠 1. سگمنتیشن تصاویر پزشکی (Medical Image Segmentation)
 
 سگمنتیشن به معنی جدا کردن بخش خاصی از تصویر پزشکی است، مثلاً تومور، اندام، یا ناحیه آسیب‌دیده. MONAI مدل‌های آماده‌ای مثل UNet و DynUNet ارائه می‌دهد و با داده‌های NIfTI و DICOM کاملاً سازگار است.
 
@@ -22,12 +22,12 @@
 
 🖼️ تصویر نمونه از سگمنتیشن تومور مغز:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Project-MONAI/MONAI/dev/docs/images/unet_brats_example.png" alt="Brain Tumor Segmentation" width="600"/>
+  <img src="https://github.com/Project-MONAI/tutorials/raw/main/images/brats_segmentation_result.png" alt="Brain Tumor Segmentation" width="600"/>
 </p>
 
 ---
 
-### 🔍 2. **طبقه‌بندی پزشکی (Medical Image Classification)**
+### 🔍 2. طبقه‌بندی پزشکی (Medical Image Classification)
 
 طبقه‌بندی تصاویر پزشکی برای تشخیص بیماری‌ها، مانند تشخیص COVID از CT قفسه سینه یا سرطان سینه از ماموگرافی. MONAI امکان استفاده از مدل‌های CNN (مثل DenseNet, ResNet) را فراهم کرده و ابزارهایی برای ارزیابی عملکرد (accuracy, AUC) در اختیار می‌گذارد.
 
@@ -38,12 +38,12 @@
 
 🖼️ نمونه طبقه‌بندی COVID-CT:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Project-MONAI/tutorials/main/images/covid_classification.png" alt="COVID CT Classification" width="600"/>
+  <img src="https://github.com/Project-MONAI/tutorials/raw/main/images/covid_classification_result.png" alt="COVID CT Classification" width="600"/>
 </p>
 
 ---
 
-### 📏 3. **ثبت تصاویر پزشکی (Image Registration)**
+### 📏 3. ثبت تصاویر پزشکی (Image Registration)
 
 در ثبت تصویر، دو تصویر از یک بیمار که در زمان‌های مختلف یا با دستگاه‌های مختلف گرفته شده‌اند، به صورت دقیق هم‌راستا می‌شوند. MONAI با ماژول `monai.networks.nets.RegUNet` امکان پیاده‌سازی الگوریتم‌های ثبت عمیق را فراهم کرده است.
 
@@ -53,12 +53,12 @@
 
 🖼️ تصویر ثبت دو MRI:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Project-MONAI/tutorials/main/images/image_registration.gif" alt="Image Registration" width="500"/>
+  <img src="https://github.com/Project-MONAI/tutorials/raw/main/images/image_registration_result.gif" alt="Image Registration" width="500"/>
 </p>
 
 ---
 
-### 🩻 4. **بازسازی سه‌بعدی (3D Reconstruction)**
+### 🩻 4. بازسازی سه‌بعدی (3D Reconstruction)
 
 داده‌های پزشکی اغلب به صورت اسلایس‌های دوبعدی ذخیره می‌شوند. با MONAI می‌توان مدل‌هایی برای بازسازی حجم سه‌بعدی ساخت و نمایش داد.
 
@@ -73,7 +73,7 @@
 
 ---
 
-### ⚙️ 5. **Pipelineهای کامل یادگیری ماشین پزشکی**
+### ⚙️ 5. Pipelineهای کامل یادگیری ماشین پزشکی
 
 MONAI علاوه بر مدل‌ها و ابزارهای پردازش، امکاناتی برای ساخت pipeline آموزشی کامل دارد، شامل:
 - Transforms پیچیده مخصوص تصاویر پزشکی
@@ -87,5 +87,5 @@ MONAI علاوه بر مدل‌ها و ابزارهای پردازش، امکا�
 
 🖼️ ساختار کلی pipeline با MONAI:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Project-MONAI/tutorials/main/images/pipeline_example.png" alt="MONAI Pipeline" width="600"/>
+  <img src="https://github.com/Project-MONAI/tutorials/raw/main/images/pipeline_structure.png" alt="MONAI Pipeline" width="600"/>
 </p>
