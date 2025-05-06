@@ -193,12 +193,12 @@ print(monai.__version__)
 ---
 
 ### 📁 ساختار فایل‌ها
-
+```text
 project-folder/
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md
-
+```
 💡 اگر از CPU-only استفاده می‌کنید، خطوط `runtime:` و `reservations:` را حذف کنید.
 
 ### 🚀  اجرای پروژه
