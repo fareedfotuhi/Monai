@@ -3,7 +3,7 @@
   <img src="monai_toolkit_logo.webp" width="600"/>
 </p>
 
-## مقدمه 
+## 📌 مقدمه 
 پیشرفت‌های اخیر در یادگیری عمیق، تحول بزرگی در حوزه تصویربرداری پزشکی ایجاد کرده‌اند؛ از تشخیص خودکار بیماری‌ها تا تحلیل پیچیده داده‌های MRI و CT. با این حال، کار با داده‌های پزشکی به دلیل فرمت‌های خاص، نیازمندی‌های پردازشی بالا، و پیچیدگی مدل‌های مورد نیاز، چالش‌برانگیز است. فریم‌ورک MONAI، که بر پایه PyTorch ساخته شده، با هدف ساده‌سازی توسعه مدل‌های هوش مصنوعی در حوزه پزشکی طراحی شده است. این کتابخانه امکانات پیشرفته‌ای برای پردازش داده‌های تصویربرداری پزشکی، ساخت مدل‌های پیچیده (مانند UNet، DynUNet و SegResNet)، و آموزش در سطح صنعتی فراهم می‌کند.
 
 ## 📌 کاربردهای MONAI
@@ -131,7 +131,7 @@ python -m venv monai-env
 source monai-env/bin/activate       # در Linux/macOS
 monai-env\Scripts\activate          # در Windows
 ```
-#### ✅ گزینه ۲: استفاده از conda
+#### ✅ گزینه ۲: استفاده از `conda`
 ```bash
 conda create -n monai-env python=3.10 -y
 conda activate monai-env
@@ -176,9 +176,9 @@ print(monai.__version__)
 ### ☁️ مرحله ۶: اجرای سریع در Google Colab (بدون نصب)
 اگر نمی‌خواهید MONAI را در سیستم خود نصب کنید، می‌توانید از Colab استفاده کنید:
 
-🔗 ![MedNIST Classification - Colab](https://colab.research.google.com/github/Project-MONAI/tutorials/blob/main/2d_classification/mednist_tutorial.ipynb)
+🔗 [MedNIST Classification - Colab](https://colab.research.google.com/github/Project-MONAI/tutorials/blob/main/2d_classification/mednist_tutorial.ipynb)
 
-🔗 ![3D Brain Tumor Segmentation - Colab](https://colab.research.google.com/github/Project-MONAI/tutorials/blob/main/3d_segmentation/swin_unetr_brats21_segmentation_3d.ipynb)
+🔗 [3D Brain Tumor Segmentation - Colab](https://colab.research.google.com/github/Project-MONAI/tutorials/blob/main/3d_segmentation/swin_unetr_brats21_segmentation_3d.ipynb)
 
 ### ℹ️ نکات مفید
 
