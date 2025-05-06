@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  monai:
+    build: .
+    container_name: monai-container
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/workspace
+    runtime: nvidia  # ← فقط در صورت استفاده از GPU
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
