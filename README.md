@@ -34,7 +34,7 @@
 
 🖼️ نمونه طبقه‌بندی:
 <p align="center">
-  <img src="https://public.grand-challenge-user-content.org/i/2020/10/28/image_101.png" alt="COVID CT Classification" width="600"/>
+  <img src="download.png" alt="COVID CT Classification" width="600"/>
 </p>
 
 ---
