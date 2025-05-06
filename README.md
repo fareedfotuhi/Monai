@@ -20,7 +20,7 @@
 
 🖼️ نمونه سگمنتیشن:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Project-MONAI/MONAI/dev/docs/images/unet_brats_example.png" alt="Brain Tumor Segmentation" width="600"/>
+  <img src="https://docs.wandb.ai/images/tutorials/monai/viz-1.gif" alt="Brain Tumor Segmentation" width="600"/>
 </p>
 
 ---
