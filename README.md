@@ -37,7 +37,7 @@
 
 📚 **مثال‌ها:**
 - 🤒 تشخیص COVID-19 از CT قفسه سینه  
-  🔗 [نمونه پروژه](https://github.com/AkashArora2303/MONAI-COVID-CT-Classification)
+  🔗 [نمونه پروژه](https://github.com/Project-MONAI/tutorials/blob/main/modules/interpretability/covid_classification.ipynb)
 - 🖼 آموزش مدل طبقه‌بندی با داده MedNIST  
   🔗 [آموزش در GitHub](https://github.com/Project-MONAI/tutorials/blob/master/2d_classification/mednist_tutorial.ipynb)
 
