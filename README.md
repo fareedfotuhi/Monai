@@ -233,7 +233,7 @@ docker-compose up --build
 
 📸 تصویر:
 <p align="center">
-  <img src="https://monai.io/assets/cases/mayo_case.png" width="600" alt="Mayo Clinic Brain Tumor Segmentation"/>
+  <img src="https://monai.io/assets/img/mayo-case-study-figure-1A.png" width="600" alt="Mayo Clinic Brain Tumor Segmentation"/>
 </p>
 
 ---
@@ -246,7 +246,7 @@ docker-compose up --build
 
 📸 تصویر:
 <p align="center">
-  <img src="https://d1.awsstatic.com/monai-label-annotation.5f68f3f4a5e67c8d2b7e206c9c1f4f9d7ac8a3ec.png" width="600" alt="AWS Telestroke Labeling"/>
+  <img src="aws.png" width="600" alt="AWS Telestroke Labeling"/>
 </p>
 
 ---
@@ -275,7 +275,7 @@ MONAI Deploy پلتفرمی است برای تبدیل مدل‌های آموز�
 
 📸 تصویر:
 <p align="center">
-  <img src="https://developer.nvidia.com/sites/default/files/akamai/blog/images/monai-deploy-arch-diagram.png" width="700" alt="MONAI Deploy Architecture"/>
+  <img src="https://developer-blogs.nvidia.com/wp-content/uploads/2022/11/MONAI-Tech-Blog-Image-1600x900-1.jpg" width="700" alt="MONAI Deploy Architecture"/>
 </p>
 
 ---
