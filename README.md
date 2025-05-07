@@ -297,4 +297,157 @@ MONAI Deploy پلتفرمی است برای تبدیل مدل‌های آموز�
 > ⚠️ توجه: برای استفاده از GPU نیاز به نصب `nvidia-docker` و فعال‌سازی CUDA در محیط میزبان دارید.
 
 
+## 🧠 مدل‌ها و ابزارهای یادگیری عمیق در MONAI
 
+فریم‌ورک MONAI مجموعه‌ای غنی از مدل‌ها، ماژول‌ها و ابزارهای مختلف برای آموزش و inference در زمینه تصویربرداری پزشکی ارائه می‌دهد. در این بخش، به معرفی مهم‌ترین مدل‌ها و کاربردهای آن‌ها پرداخته‌ایم.
+
+### 🔷 1. **UNet**
+
+- 📌 **نوع**: سگمنتیشن پزشکی
+- 💡 **کاربرد**: استخراج ساختارهای بافتی از تصاویر CT/MRI، مانند مغز، ریه، کبد
+- 🛠️ **کلاس**: `monai.networks.nets.UNet`
+
+```python
+from monai.networks.nets import UNet
+
+model = UNet(
+    spatial_dims=3,
+    in_channels=1,
+    out_channels=2,
+    channels=(16, 32, 64, 128, 256),
+    strides=(2, 2, 2, 2),
+    num_res_units=2,
+)
+```
+### 🔷 2. DynUNet
+- 📌 نوع: سگمنتیشن پویا برای سایزهای تصویر متغیر
+
+- 💡 کاربرد: انعطاف‌پذیری بالا برای ورودی‌های با ابعاد مختلف (مناسب برای داده‌های 3D)
+
+- 🛠️ کلاس: `monai.networks.nets.DynUNet`
+
+```python
+from monai.networks.nets import DynUNet
+
+model = DynUNet(
+    spatial_dims=3,
+    in_channels=1,
+    out_channels=3,
+    kernel_size=[3, 3, 3, 3],
+    strides=[1, 2, 2, 2],
+    upsample_kernel_size=[2, 2, 2],
+)
+```
+
+### 3. SegResNet
+- 📌 نوع: سگمنتیشن بر پایه ResNet
+
+- 💡 کاربرد: استخراج نواحی پیچیده با دقت بالا در MRI، CT
+
+- 🛠️ کلاس: `monai.networks.nets.SegResNet`
+
+```python
+from monai.networks.nets import SegResNet
+
+model = SegResNet(
+    spatial_dims=3,
+    in_channels=1,
+    out_channels=2,
+    init_filters=8,
+    blocks_down=[1, 2, 2, 4],
+)
+```
+
+### 🔷 4. VNet
+- 📌 نوع: مدل volumetric برای 3D segmentation
+
+- 💡 کاربرد: segmentation دقیق در داده‌های حجمی (3D)
+
+- 🛠️ کلاس: `monai.networks.nets.VNet`
+
+```python
+from monai.networks.nets import VNet
+
+model = VNet(
+    spatial_dims=3,
+    in_channels=1,
+    out_channels=2
+)
+```
+
+### 🔷 5. Attention UNet
+- 📌 نوع: UNet بهبود یافته با Attention
+
+- 💡 کاربرد: تمرکز بیشتر روی نواحی مهم در تصویر
+
+- 🛠️ کلاس: `monai.networks.nets.AttentionUnet`
+```python
+from monai.networks.nets import AttentionUnet
+
+model = AttentionUnet(
+    spatial_dims=3,
+    in_channels=1,
+    out_channels=2,
+    channels=(16, 32, 64, 128, 256),
+    strides=(2, 2, 2, 2),
+)
+```
+### 🔷 6. DenseNet (برای Classification)
+- 📌 نوع: طبقه‌بندی تصاویر پزشکی
+
+- 💡 کاربرد: تشخیص COVID از CT، طبقه‌بندی سرطان
+
+- 🛠️ کلاس: `monai.networks.nets.DenseNet121`
+```python
+from monai.networks.nets import DenseNet121
+
+model = DenseNet121(
+    spatial_dims=2,
+    in_channels=1,
+    out_channels=2,
+)
+```
+### 🔷 7. Swin UNETR (Transformer-based)
+- 📌 نوع: مدل Transformer برای segmentation
+
+- 💡 کاربرد: segmentation حجمی پیشرفته با دقت بالا
+
+- 🛠️ کلاس: `monai.networks.nets.SwinUNETR`
+
+```python
+from monai.networks.nets import SwinUNETR
+
+model = SwinUNETR(
+    img_size=(96, 96, 96),
+    in_channels=1,
+    out_channels=2,
+    feature_size=48,
+    use_checkpoint=True,
+)
+```
+### 8. Generative Models (GANs, Diffusion)
+-  📌 نوع: مدل‌های تولیدی
+
+- 💡 کاربرد: بازسازی تصویر، data augmentation، تولید داده مصنوعی
+
+- 📦 کلاس‌ها در monai.generative.networks
+
+### 🧪 سایر ابزارهای مفید در MONAI
+MONAI علاوه بر مدل‌های یادگیری عمیق، ابزارهای مختلفی برای پردازش تصویر، ارزیابی، و استقرار فراهم می‌کند. برخی از این ابزارها شامل موارد زیر هستند:
+
+| ابزار            | کاربرد                                          | ماژول              |
+| ---------------- | ----------------------------------------------- | ------------------ |
+| `Transforms`     | پردازش تصویر (چرخش، نرمال‌سازی، crop، resample) | `monai.transforms` |
+| `Loss Functions` | DiceLoss، FocalLoss، Tversky                    | `monai.losses`     |
+| `Metrics`        | Dice, Hausdorff, AUC                            | `monai.metrics`    |
+| `Engines`        | گردش‌کار آموزش و inference                      | `monai.engines`    |
+| `Bundle`         | مدیریت پروژه‌ها به‌صورت config-based            | `monai.bundle`     |
+| `Deploy`         | استقرار مدل در بیمارستان (runtime, App SDK)     | `monai.deploy`     |
+| `Label`          | برچسب‌زنی نیمه‌خودکار داده پزشکی                | `monai.label`      |
+
+
+
+## 📚 برای مطالعه بیشتر
+برای آشنایی بیشتر با MONAI و نحوه استفاده از آن در پروژه‌های پزشکی، مستندات رسمی فریم‌ورک را مطالعه کنید:
+
+🔗 [MONAI Documentation](https://docs.monai.io/en/stable/)
